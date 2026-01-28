@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class NuevoComponente {
   protected  tituloNuevoComponente = "Nuevo componente";
+  protected paises = ["Mexico", "Canada", "Brasil", "Alemania"];
 }
