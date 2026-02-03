@@ -1,0 +1,17 @@
+<h2 class="font-semibold text-2xl mb-3">Event binding</h2>
+<div class="flex items-center justify-center py-5 space-x-4">
+  <button
+    class="border px-3 py-2 rounded-xl font-semibold bg-green-500 text-white cursor-pointer
+     hover:bg-green-600 transition-colors duration-500" (click)="showMessage()"
+  >
+    Mostrar mensaje
+  </button>
+
+  <button class="border px-3 py-2 rounded-xl font-semibold bg-red-400 text-white cursor-pointer
+    hover:bg-red-600 transition-colors duration-500" (click)="resetMessage()">Ocultar Mensaje
+  </button>
+
+  <div class="border bg-amber-300 text-center rounded-md font-semibold">
+    {{mostrarMessage}}
+  </div>
+</div>

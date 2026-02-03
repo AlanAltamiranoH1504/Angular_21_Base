@@ -1,0 +1,12 @@
+<h2 class="font-semibold text-2xl mb-3">Property binding</h2>
+<div class="flex flex-col space-y-3">
+  <div class="space-x-5">
+    <label class="mb-2 w-full font-semibold text-xl">Ingresa texto:</label>
+    <input type="text" class="border px-3 py-2 rounded-xl" (input)="updateText($event)">
+  </div>
+
+  <div class="space-x-5">
+    <label class="mb-2 w-full font-semibold text-xl">Texto Replicado:</label>
+    <input type="text" class="border px-3 py-2 rounded-xl" [value]="texto" readonly>
+  </div>
+</div>
