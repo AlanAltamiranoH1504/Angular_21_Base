@@ -1,0 +1,18 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md  p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Local Reference</h2>
+    <div class="flex md:flex-col gap-4 items-center justify-center">
+      <input
+        (input)="addHomework($event)"
+        type="text" placeholder="Nombre de tarea" class="border w-128 px-3 py-2 rounded-xl bg-white text-black">
+      <button (click)="showHomework()" class="bg-green-600 px-3 py-2 w-64 rounded-xl cursor-pointer">Click</button>
+    </div>
+  </div>
+
+  <div class="w-1/2 border shadow-md rounded-md bg-gray-900 p-3 text-white">
+    <h2 class="font-semibold text-amber-500 text-2xl">Local Reference</h2>
+    @if (homework() !== "") {
+      <h2 class="bg-white w-64 rounded-xl text-black">{{ homework() }}</h2>
+    }
+  </div>
+</div>

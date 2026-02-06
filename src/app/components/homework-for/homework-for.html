@@ -1,0 +1,31 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md  p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Ciclo For</h2>
+    <div class="space-y-3">
+      <input
+        (input)="save_homework($event)"
+        type="text" class="w-full bg-white border px-3 py-2 rounded-xl text-black" placeholder="Ingresa tarea">
+      <input
+        (click)="addHomework()"
+        type="button"
+        value="Agregar Tarea"
+        class="border bg-green-600 text-white font-semibold px-3 py-2 w-64 rounded-xl border-green-600 cursor-pointer"
+      >
+    </div>
+  </div>
+
+  <div class="w-1/2 border shadow-md rounded-md bg-gray-900 p-3 text-white">
+    <h2 class="font-semibold text-amber-500 text-2xl">Lista de Tareas</h2>
+    @if (homeworkList().length > 0) {
+      <div class="flex md:flex-row flex-col p-5 items-center justify-center">
+        <ul class="list-disc">
+          @for (hw of homeworkList(); track hw) {
+            <li class="text-white">{{ hw }}</li>
+          }
+        </ul>
+      </div>
+    } @else {
+      <p class="my-10 font-semibold">No hay tareas disponibles</p>
+    }
+  </div>
+</div>

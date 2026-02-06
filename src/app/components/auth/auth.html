@@ -1,0 +1,20 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md  p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Directiva If en Angular</h2>
+    <button
+      (click)="change_auth()"
+      class="border bg-blue-600 px-3 py-2 border-blue-600 font-semibold uppercase rounded-xl hover:bg-blue-700 transition-colors duration-500 cursor-pointer">
+      Alternar Estado
+    </button>
+  </div>
+  <div class="w-1/2 border shadow-md rounded-md bg-gray-900 p-3 text-white">
+    <h2 class="font-semibold text-amber-500 text-2xl">Estado de Autenticación</h2>
+    <div class="my-4 flex items-center justify-center">
+      @if (get_auth) {
+        <h2 class="border border-green-600 w-64 rounded-md bg-green-600 text-xl p-2 font-semibold">Usuario Autenticado</h2>
+      } @else {
+        <h2 class="border border-orange-400 w-64 rounded-md bg-orange-400 text-xl p-2 font-semibold">Usuario No Autenticado</h2>
+      }
+    </div>
+  </div>
+</div>
