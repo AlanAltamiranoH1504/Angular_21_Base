@@ -1,0 +1,12 @@
+<div class="container mx-auto space-y-3">
+  <h3>Cuerpo de Props Enviados</h3>
+  <p class="font-semibold">Nombre: <span class="font-normal">{{character().name}}</span></p>
+  <p class="font-semibold">Descripción: <span class="font-normal">{{character().description}}</span></p>
+  <p class="font-semibold">Poder: <span class="font-normal">{{character().power}}</span></p>
+
+  <div class="container mx-auto">
+    <button
+      (click)="send_message()"
+      class="px-3 py-2 border rounded-md font-semibold bg-indigo-600 border-indigo-600 cursor-pointer">Enviar Saludo a Componente Padre</button>
+  </div>
+</div>

@@ -12,10 +12,12 @@ import {Calculator} from './components/calculator/calculator';
 import {Auth} from './components/auth/auth';
 import {LocalReference} from './components/local-reference/local-reference';
 import {HomeworkFor} from './components/homework-for/homework-for';
+import {ComponentePadre} from './components/dedecorador-input/componente-padre/componente-padre';
+import {CalculadoraOutput} from './components/calculadora-output/calculadora-output';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor],
+  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

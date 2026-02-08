@@ -1,0 +1,11 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md  p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Calculadora Output</h2>
+    <app-formulario (result_to_send)="save_result($event)"></app-formulario>
+  </div>
+
+  <div class="w-1/2 border shadow-md rounded-md bg-gray-900 p-3 text-white">
+    <h2 class="font-semibold text-amber-500 text-2xl mb-3">Resultado de Operacion</h2>
+    {{result()}}
+  </div>
+</div>
