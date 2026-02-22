@@ -1,0 +1,17 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md  p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Manejo de Servicios</h2>
+    <button
+      (click)="called_service()"
+      class="bg-green-700 px-3 py-2 rounded-md font-semibold cursor-pointer hover:bg-green-600 transition-colors duration-500">
+      Llamar Servicio
+    </button>
+  </div>
+
+  <div class="w-1/2 border shadow-md rounded-md bg-gray-900 p-3 text-white">
+    <h2 class="font-semibold text-amber-500 text-2xl mb-3">Resultado de Llamada a Servicio</h2>
+    @if (resultService() !== "") {
+      <h2 class="font-semibold">{{ resultService() }}</h2>
+    }
+  </div>
+</div>

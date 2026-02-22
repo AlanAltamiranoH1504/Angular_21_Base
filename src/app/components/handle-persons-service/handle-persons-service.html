@@ -1,0 +1,15 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Manejo de Servicio Externo</h2>
+    <button
+      (click)="get_person()"
+      class="bg-green-600 px-3 py-2 rounded-md font-semibold hover:bg-green-700 transition-colors duration-500 cursor-pointer">
+      Llamar API
+    </button>
+  </div>
+  <div class="w-1/2 border shadow-md rounded-md p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Resultado de Llamado a API</h2>
+
+    <app-list-persons [persons]="listPersons()"></app-list-persons>
+  </div>
+</div>

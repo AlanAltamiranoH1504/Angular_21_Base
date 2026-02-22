@@ -1,0 +1,13 @@
+@if (persons().length > 0) {
+  @for (person of persons(); track person.id) {
+    <div class="space-y-2 my-2 flex justify-center items-center">
+      <div class="border px-2 border-amber-400 w-64">
+        <p>Id: {{person.id}}</p>
+        <p>Nombre: {{person.name}}</p>
+        <p>Email: {{person.email}}</p>
+      </div>
+    </div>
+  }
+} @else {
+  <h2>Aun no hay personas</h2>
+}

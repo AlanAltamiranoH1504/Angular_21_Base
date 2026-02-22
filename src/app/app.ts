@@ -14,10 +14,12 @@ import {LocalReference} from './components/local-reference/local-reference';
 import {HomeworkFor} from './components/homework-for/homework-for';
 import {ComponentePadre} from './components/dedecorador-input/componente-padre/componente-padre';
 import {CalculadoraOutput} from './components/calculadora-output/calculadora-output';
+import {HandleService} from './components/handle-service/handle-service';
+import {HandlePersonsService} from './components/handle-persons-service/handle-persons-service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput],
+  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
