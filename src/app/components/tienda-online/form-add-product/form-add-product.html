@@ -1,0 +1,12 @@
+<form class="border p-5 shadow-md bg-white text-black rounded-lg">
+  <div class="mb-5 space-y-2">
+    <label class="font-semibold uppercase block">Nombre de Producto</label>
+    <input #inputName (input)="saveNameProduct(inputName.value)" type="text" class="border py-2 w-full rounded-lg border-gray-300 px-3">
+  </div>
+  <div class="mb-5 space-y-2">
+    <label class="font-semibold uppercase block">Precio de Producto</label>
+    <input #inputPrice (input)="savePriceProduct(inputPrice.value)" type="text" class="border py-2 w-full rounded-lg border-gray-300 px-3">
+  </div>
+
+  <button type="button" (click)="addProduct()" class=" cursor-pointer bg-blue-600 border px-3 py-2 text-white font-semibold rounded-lg">Agregar Producto</button>
+</form>

@@ -34,3 +34,8 @@ export interface Company {
   bs:          string;
 }
 
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+}

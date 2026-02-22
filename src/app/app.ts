@@ -16,10 +16,11 @@ import {ComponentePadre} from './components/dedecorador-input/componente-padre/c
 import {CalculadoraOutput} from './components/calculadora-output/calculadora-output';
 import {HandleService} from './components/handle-service/handle-service';
 import {HandlePersonsService} from './components/handle-persons-service/handle-persons-service';
+import {TiendaOnline} from './components/tienda-online/tienda-online';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService],
+  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService, TiendaOnline],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,11 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="text-amber-500 font-semibold text-2xl">Formulario de Productos</h2>
+
+    <app-form-add-product (productToAdd)="saveProduct($event)"></app-form-add-product>
+  </div>
+  <div class="w-1/2 border shadow-md rounded-md p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="text-amber-500 font-semibold text-2xl">Listado de Productos</h2>
+    <app-list-products [productsList]="productService.products()"></app-list-products>
+  </div>
+</div>

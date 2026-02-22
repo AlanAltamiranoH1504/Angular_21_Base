@@ -1,0 +1,9 @@
+@if (productsList().length > 0) {
+  @for (product of productsList(); track product.name) {
+    <div class="flex md:flex-row flex-col border-2 my-5 border-amber-500 py-2 gap-4 rounded-lg font-semibold px-3 justify-center">
+      <p>{{ product.name }}</p> - <p>{{ product.price }}</p>
+    </div>
+  }
+} @else {
+  <p>No tienes productos disponibles</p>
+}
