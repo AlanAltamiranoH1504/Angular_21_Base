@@ -46,3 +46,10 @@ export interface Empleado {
   sueldo: number;
   fechaNacimiento: string
 }
+
+export interface Transaction {
+  id: number,
+  type: string;
+  description: string;
+  amount: number;
+}

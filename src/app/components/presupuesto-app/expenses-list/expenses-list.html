@@ -1,0 +1,21 @@
+<div>
+  <h2 class="text-2xl font-bold text-center text-red-600 mb-4">Egresos</h2>
+  <ul class="divide-y divide-gray-200 border rounded-lg overflow-hidden shadow-sm">
+    @if (expensesTransactions().length > 0) {
+          @for (expense of expensesTransactions(); track expense.description) {
+              <li class="flex justify-between items-center p-4 bg-white hover:bg-gray-50">
+                <span class="flex-grow text-gray-700">{{expense.description}}</span>
+                <div class="flex items-center gap-3 mx-4">
+                  <span class="text-red-600 font-medium">- {{expense.amount | currency}}</span>
+                  <span class="bg-green-500 text-white text-[10px] px-2 py-0.5 rounded-full">20%</span>
+                </div>
+                <button class="text-red-500 hover:text-red-700 transition-colors p-1">
+                  <i class="bi bi-x-circle text-lg"></i>
+                </button>
+              </li>
+            }
+    } @else {
+      <div class="text-white text-center text-xl">No tienes gastos disponibles</div>
+    }
+  </ul>
+</div>

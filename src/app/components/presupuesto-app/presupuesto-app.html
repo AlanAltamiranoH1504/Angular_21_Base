@@ -1,0 +1,9 @@
+<div class="container mx-auto my-12 px-4 bg-gray-900 min-h-screen py-5">
+  <app-header-presupuesto></app-header-presupuesto>
+  <app-form-presupuesto (transaction_to_send)="add_transaction($event)"></app-form-presupuesto>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+    <app-income-list [incomeTransactions]="incomeList()"></app-income-list>
+    <app-expenses-list [expensesTransactions]="expensesList()"></app-expenses-list>
+  </div>
+</div>

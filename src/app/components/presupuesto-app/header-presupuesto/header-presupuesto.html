@@ -1,0 +1,20 @@
+<div class="flex justify-center">
+  <div class="p-6 rounded-lg border border-blue-500 text-center w-full max-w-2xl bg-white shadow-sm">
+    <h4 class="mb-3 text-lg font-medium text-gray-700 ">Presupuesto Disponible:</h4>
+    <div class="text-5xl md:text-6xl font-bold text-yellow-500">{{presupuestoService.initialAmount() | currency}}</div>
+
+    <div class="flex flex-wrap mt-6 justify-center gap-8">
+      <div class="text-center">
+        <div class="uppercase text-sm tracking-wider text-gray-500">INGRESOS</div>
+        <div class="text-green-600 text-xl font-semibold">{{presupuestoService.income() | currency}}</div>
+      </div>
+      <div class="text-center">
+        <div class="uppercase text-sm tracking-wider text-gray-500">EGRESOS</div>
+        <div class="text-red-600 text-xl font-semibold flex items-center justify-center gap-2">
+          {{presupuestoService.expenses() | currency}}
+          <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">24%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

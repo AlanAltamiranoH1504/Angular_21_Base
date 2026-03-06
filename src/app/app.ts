@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, signal} from '@angular/core';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {NuevoComponente} from './components/nuevo-componente/nuevo-componente';
 import {ComponenteInline} from './componente-inline/componente-inline';
 import {Interpolacion} from './components/interpolacion/interpolacion';
@@ -18,10 +18,11 @@ import {HandleService} from './components/handle-service/handle-service';
 import {HandlePersonsService} from './components/handle-persons-service/handle-persons-service';
 import {TiendaOnline} from './components/tienda-online/tienda-online';
 import {Pipes} from './components/pipes/pipes';
+import {HeaderApp} from './components/header-app/header-app';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService, TiendaOnline, Pipes],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService, TiendaOnline, Pipes, HeaderApp],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
