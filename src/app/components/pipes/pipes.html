@@ -1,0 +1,24 @@
+<div class="flex md:flex-row flex-col p-5 gap-6">
+  <div class="w-1/2 border shadow-md rounded-md p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Listado de Empleados</h2>
+
+  </div>
+  <div class="w-1/2 border shadow-md rounded-md p-3 bg-gray-900 text-white space-y-5">
+    <h2 class="font-semibold text-amber-500 text-2xl">Resultado de Llamado a API</h2>
+    <ul >
+      @for (empleado of empleados; track empleado) {
+        <li class="border-2 border-amber-500 p-2 my-2 rounded-xl">
+          <div class="mb-2">
+            <h5>{{empleado.nombre | uppercase}}</h5>
+            <small class="text-sm">
+              Fecha Nacimiento: {{empleado.fechaNacimiento | date:"longDate"}}
+            </small>
+          </div>
+          <span class="border-2 bg-green-600 text-white font-semibold">
+            {{empleado.sueldo | currency}}
+          </span>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

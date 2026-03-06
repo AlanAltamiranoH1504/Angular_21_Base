@@ -39,3 +39,10 @@ export interface Product {
   name: string;
   price: number;
 }
+
+export interface Empleado {
+  id_empleado: number;
+  nombre: string,
+  sueldo: number;
+  fechaNacimiento: string
+}

@@ -17,10 +17,11 @@ import {CalculadoraOutput} from './components/calculadora-output/calculadora-out
 import {HandleService} from './components/handle-service/handle-service';
 import {HandlePersonsService} from './components/handle-persons-service/handle-persons-service';
 import {TiendaOnline} from './components/tienda-online/tienda-online';
+import {Pipes} from './components/pipes/pipes';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService, TiendaOnline],
+  imports: [RouterOutlet, NuevoComponente, ComponenteInline, Interpolacion, Padre, Hijo, ShowMessageComponent, Replicador, Saludar, Calculator, Auth, LocalReference, HomeworkFor, ComponentePadre, CalculadoraOutput, HandleService, HandlePersonsService, TiendaOnline, Pipes],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
