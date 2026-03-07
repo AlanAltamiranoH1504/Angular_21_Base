@@ -1,9 +1,13 @@
 import {Component, input} from '@angular/core';
 import {Transaction} from '../../../types';
+import {CurrencyPipe, UpperCasePipe} from '@angular/common';
 
 @Component({
   selector: 'app-income-list',
-  imports: [],
+  imports: [
+    UpperCasePipe,
+    CurrencyPipe
+  ],
   templateUrl: './income-list.html',
   styleUrl: './income-list.css',
 })

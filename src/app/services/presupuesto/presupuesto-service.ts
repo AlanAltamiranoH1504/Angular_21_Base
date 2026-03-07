@@ -8,6 +8,10 @@ export class PresupuestoService {
   public income = signal(0);
   public expenses = signal(0);
   public initialAmount = computed(() => this.income() - this.expenses());
+  public percentage = computed(() => {
+    if (this.income() === 0) return 0;
+    return (this.expenses() / this.income())
+  });
   public listTransactions = signal<Transaction[]>([]);
 
   public add_transaction(transaction: Transaction) {
