@@ -1,6 +1,7 @@
-import {Component, input} from '@angular/core';
+import {Component, inject, input} from '@angular/core';
 import {Transaction} from '../../../types';
 import {CurrencyPipe, UpperCasePipe} from '@angular/common';
+import {PresupuestoService} from '../../../services/presupuesto/presupuesto-service';
 
 @Component({
   selector: 'app-income-list',
@@ -13,4 +14,9 @@ import {CurrencyPipe, UpperCasePipe} from '@angular/common';
 })
 export class IncomeList {
   public incomeTransactions = input.required<Transaction[]>();
+  public presupuestoService = inject(PresupuestoService);
+
+  public delete_transaction(transactionId: number) {
+    this.presupuestoService.removeTransaction(transactionId);
+  }
 }

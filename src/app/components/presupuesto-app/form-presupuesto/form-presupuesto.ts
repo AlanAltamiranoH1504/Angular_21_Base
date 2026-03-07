@@ -43,6 +43,12 @@ export class FormPresupuesto {
       alert("Por favor, llena los datos correctamente");
       return;
     }
+    this.transaction.update((data) => {
+      return {
+        ...data,
+        id: Math.floor(Math.random() * (1000000 - 100 + 1)) + 100
+      }
+    });
     this.transaction_to_send.emit(this.transaction());
   }
 }

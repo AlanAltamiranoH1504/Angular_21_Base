@@ -24,6 +24,26 @@ export class PresupuestoService {
     this.general_operations(transaction.amount, transaction.type);
   }
 
+  public removeTransaction(transactionId: number) {
+    const transaction = this.listTransactions().find((t) => {
+      return t.id === transactionId
+    });
+    if (!transaction) {
+      alert(`La transaccion con id ${transactionId} no esta registrada`);
+    }
+
+    const new_transactions = this.listTransactions().filter((t) => {
+      return t.id !== transactionId;
+    })
+    this.listTransactions.set(new_transactions);
+
+    if (transaction?.type === "ingresoOperacion") {
+      this.income.update((value) => value - transaction!.amount);
+    } else {
+      this.expenses.update((value) => value - transaction!.amount);
+    }
+  }
+
   public get_expenses() {
     return this.listTransactions().filter((transaction) => {
       return transaction.type === "egresoOperacion";
@@ -42,5 +62,10 @@ export class PresupuestoService {
     } else {
       this.expenses.update((value) => value + amount);
     }
+  }
+
+  public getExpensePercentage(amount: number) {
+    const totalExpesesAmount = this.expenses();
+    return amount / totalExpesesAmount;
   }
 }
