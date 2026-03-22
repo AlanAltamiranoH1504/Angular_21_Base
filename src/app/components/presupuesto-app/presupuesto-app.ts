@@ -6,6 +6,7 @@ import {FormPresupuesto} from './form-presupuesto/form-presupuesto';
 import {IncomeList} from './income-list/income-list';
 import {ExpensesList} from './expenses-list/expenses-list';
 import {Transaction} from '../../types';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-presupuesto-app',
@@ -14,7 +15,8 @@ import {Transaction} from '../../types';
     HeaderPresupuesto,
     FormPresupuesto,
     IncomeList,
-    ExpensesList
+    ExpensesList,
+    RouterOutlet
   ],
   templateUrl: './presupuesto-app.html',
   styleUrl: './presupuesto-app.css',

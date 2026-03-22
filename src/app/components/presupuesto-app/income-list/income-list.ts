@@ -2,12 +2,14 @@ import {Component, inject, input} from '@angular/core';
 import {Transaction} from '../../../types';
 import {CurrencyPipe, UpperCasePipe} from '@angular/common';
 import {PresupuestoService} from '../../../services/presupuesto/presupuesto-service';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-income-list',
   imports: [
     UpperCasePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    RouterLink
   ],
   templateUrl: './income-list.html',
   styleUrl: './income-list.css',

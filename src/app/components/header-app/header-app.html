@@ -1,12 +1,18 @@
 <div class="flex md:flex-row flex-col gap-4 justify-center">
   <a
     routerLink="/"
-    routerLinkActive="bg-green-300"
+    routerLinkActive="bg-indigo-900 ring-4 ring-indigo-300 scale-105"
     [routerLinkActiveOptions]="{exact: true}"
     class="border cursor-pointer px-3 py-2 bg-indigo-500 text-white text-xl uppercase font-semibold rounded-xl">Basic</a>
   <a
     routerLink="/presupuesto"
-    routerLinkActive="bg-green-300"
+    routerLinkActive="bg-indigo-900 ring-4 ring-indigo-300 scale-105"
     [routerLinkActiveOptions]="{exact: true}"
-    class="border cursor-pointer px-3 py-2 bg-indigo-500 text-white font-semibold uppercase rounded-xl">Presupuestos</a>
+    class="border cursor-pointer px-3 py-2 bg-indigo-500 text-white text-xl font-semibold uppercase rounded-xl">Presupuestos</a>
+
+  <a
+    [routerLink]="['/mensaje']" [queryParams]="{id: 1, nombre: 'Alan', edad: 25}"
+    routerLinkActive="bg-indigo-900 ring-4 ring-indigo-300 scale-105"
+    class="border cursor-pointer px-3 py-2 bg-indigo-500 text-white text-xl font-semibold uppercase rounded-xl"
+  >Parametros x Mensaje</a>
 </div>

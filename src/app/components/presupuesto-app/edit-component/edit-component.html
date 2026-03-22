@@ -1,0 +1,21 @@
+<div class="flex justify-center items-center text-black">
+  <div class="my-10 border border-2 p-10 shadow-2xl rounded-2xl bg-white w-full max-w-2xl">
+    <h2 class="text-center text-2xl font-semibold mb-5">Edicion de Transacciones</h2>
+
+    <div class="mb-5 space-y-2">
+      <label class="font-semibold text-gray-700 block uppercase">Descripción:</label>
+      <input type="text" [(ngModel)]="transactionToEdit().description" class="border px-3 py-2 rounded-xl w-full">
+    </div>
+
+    <div class="mb-5 space-y-2">
+      <label class="font-semibold text-gray-700 block uppercase">Monto:</label>
+      <input type="text" [(ngModel)]="transactionToEdit().amount" class="border px-3 py-2 rounded-xl w-full">
+    </div>
+
+    <button (click)="updateTransaction()" class="btn w-full font-semibold uppercase bg-green-600 hover:bg-green-700 transition-colors duration-500">
+      Actualizar
+    </button>
+
+  </div>
+</div>
+

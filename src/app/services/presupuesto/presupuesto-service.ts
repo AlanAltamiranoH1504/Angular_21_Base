@@ -24,6 +24,15 @@ export class PresupuestoService {
     this.general_operations(transaction.amount, transaction.type);
   }
 
+  public updateTransaction(transaction: Transaction) {
+    const transactionToUpdate = this.getTransaction(transaction.id);
+    this.listTransactions.update((transactions) =>
+      transactions.map(t =>
+        t.id === transaction.id ? transaction : t
+      )
+    );
+  }
+
   public removeTransaction(transactionId: number) {
     const transaction = this.listTransactions().find((t) => {
       return t.id === transactionId
@@ -53,6 +62,12 @@ export class PresupuestoService {
   public get_incomes() {
     return this.listTransactions().filter((transaction) => {
       return transaction.type === "ingresoOperacion"
+    });
+  }
+
+  public getTransaction(transactionId: number) {
+    return this.listTransactions().find((transaction) => {
+      return transaction.id === transactionId;
     });
   }
 

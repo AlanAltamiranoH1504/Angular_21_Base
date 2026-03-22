@@ -1,0 +1,39 @@
+<div class="container mx-auto mt-10">
+  <div class="flex md:flex-row justify-center items-center">
+    <form class="border p-10 rounded-2xl shadow-2xl">
+      <h2 class="text-center text-2xl font-semibold uppercase my-5">Datos Query Params</h2>
+      <div class="mb-5">
+        <label class="block font-semibold text-xl uppercase text-gray-600">Id de Usuario</label>
+        <input
+          value="{{id()}}"
+          [readOnly]="true"
+          type="text" class="px-3 py-2 border bg-white shadow-2xl rounded-xl w-full">
+      </div>
+
+      <div class="mb-5">
+        <label class="block font-semibold text-xl uppercase text-gray-600">Nombre de Usuario</label>
+        <input
+          value="{{nombre()}}"
+          readonly="true"
+          type="text" class="px-3 py-2 border bg-white shadow-2xl rounded-xl w-full">
+      </div>
+
+      <div class="mb-5">
+        <label class="block font-semibold text-xl uppercase text-gray-600">Edad de Usuario</label>
+        <input
+          value="{{edad()}}"
+          [readOnly]="true"
+          type="text" class="px-3 py-2 border bg-white shadow-2xl rounded-xl w-full">
+      </div>
+
+      <div class="mb-5 space-x-4">
+        <button type="button" class="px-3 py-2 cursor-pointer font-semibold bg-green-600 rounded-xl text-white">Mostrar
+          Mensaje
+        </button>
+        <button type="button" class="px-3 py-2 cursor-pointer font-semibold bg-red-600 rounded-xl text-white">Eliminar
+          Mensaje
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
