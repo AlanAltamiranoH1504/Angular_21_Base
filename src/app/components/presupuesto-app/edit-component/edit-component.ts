@@ -37,7 +37,7 @@ export class EditComponent {
         alert("NO SE ENCONTRO LA TRANSACCION");
         setTimeout(() => {
           this.router.navigate(["/presupuesto"]);
-        }, 3500)
+        }, 500)
       }
     });
   }
